@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全加载中...</title>
+    
+    <script>
+        /** * 配置区：以后换域名只改下面这一行即可 
+         */
+        var targetURL = "http://mp34.cc"; 
+        var delayTime = 1200; // 跳转延迟（1200毫秒 = 1.2秒）
+
+        // 执行跳转函数
+        function performRedirect() {
+            window.location.replace(targetURL);
+        }
+
+        // 兼容性自动跳转
+        document.write('<meta http-equiv="refresh" content="' + (delayTime/1000) + ';url=' + targetURL + '">');
+        setTimeout(performRedirect, delayTime);
+    </script>
+
+    <style>
+        body {
+            background-color: #f4f7f9;
+            color: #333;
+            font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #ffffff;
+            padding: 35px 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            width: 90%;
+            max-width: 360px;
+        }
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 4px solid #e1e4e8;
+            border-bottom-color: #007bff;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #1a1a1a;
+        }
+        p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        .brand {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.75rem;
+            color: #abb2ba;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <span class="loader"></span>
+        <h1>建立安全通道</h1>
+        <p>正在为您分配加密节点...<br>请稍候，跳转后即可正常访问</p>
+        
+        <div class="brand">
+            Shadow Sentinel Offshore Support
+        </div>
+    </div>
+
+    <noscript>
+        <div style="text-align:center; padding:20px;">
+            您的浏览器禁用了 JavaScript，请 <a href="http://mp34.cc">点击此处直接进入</a>
+        </div>
+    </noscript>
+
+</body>
+</html>
